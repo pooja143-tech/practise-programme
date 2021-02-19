@@ -1,0 +1,129 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+li {
+    display: block;
+    float: right;
+}
+
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+button a {}
+
+.google-logo {
+    position: absolute;
+    margin: 10em 32.5em;
+}
+
+.feeling-lucky {
+    position: absolute;
+    margin: 20em 32.5em;
+    width: 400px;
+}
+
+.div {
+    float: left;
+    position: relative;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+#searchbar {
+    position: absolute;
+    top: 260px;
+    left: 375px;
+    width: 580px;
+    height: 39px;
+    border: 1px solid #cdcdcd;
+    border-radius: 20px;
+}
+
+#searchbar:hover {
+    color: blue;
+    border-radius: 20px;
+    cursor: pointer;
+    border-color: blue
+}
+
+#search_button {
+    position: absolute;
+    top: 310px;
+    left: 550px;
+    border: 1px solid #dcdcdc;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #444!important;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px;
+    background: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+#lucky_button {
+    position: absolute;
+    top: 310px;
+    left: 680px;
+    border: 1px solid #dcdcdc;
+    border-color: rgba(0, 0, 0, 0.1);
+    color: #444!important;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px;
+    background: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background-color: #efefef;
+    text-align: center;
+    margin: 20em;
+}
+
+h1 {
+    font-weight: 500px;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    font-size: 80px;
+    margin-left: 5px;
+    margin-top: -20px;
+}
+
+#G {
+    color: rgb(66, 133, 244);
+}
+
+#o {
+    color: rgb(219, 68, 55);
+}
+
+#oo {
+    color: rgb(244, 160, 0)
+}
+
+#g {
+    color: rgb(66, 133, 244);
+}
+
+#l {
+    color: rgb(15, 157, 88);
+}
+
+#e {
+    color: rgb(219, 68, 55);
+}
