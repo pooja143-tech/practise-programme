@@ -1,0 +1,94 @@
+<form #addClientForm="ngForm" (ngSubmit)="searchByDate()" novalidate>
+    <div class="row" style="margin-top:10px;margin-bottom: 10px;">
+        <div class="col-sm-3 form-group"> </div>
+        <div class="col-sm-3 form-group">
+            <input type="date" name="date" [(ngModel)]="startedDate" placeholder="From Date" class="form-control" data-date-format="yyy/dd/mm" />
+        </div>
+        <div class="col-sm-3 form-group">
+            <input type="date" name="date" [(ngModel)]="endDate" placeholder="To Date" class="form-control " />
+        </div>
+        <div class="col-sm-3 form-group">
+            <button type="submit" class="btn btn-success">Search</button>
+        </div>
+    </div>
+</form>
+<!-- date -->
+<div class="form-group" class=" offset-2 col-md-5 ">
+    <label>search</label>
+    <select [(ngModel)]="searchBy" (change)="onChanged($event)">
+        <option *ngFor="let item of items;" [value]="item">{{item}}</option>
+      </select>
+</div>
+
+<!-- select -->
+
+<!-- if -->
+
+<div class="list row">
+    <div class="col-md-8">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search by title and description" [(ngModel)]="searchString" />
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" (click)="search()">
+          Search
+        </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- descrip -->
+
+    <!-- <div class="list row">
+        <div class="col-md-8">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search by description" [(ngModel)]="description" />
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" (click)="searchDescription()">
+          Search
+        </button>
+                </div>
+            </div>
+        </div> -->
+
+    <!-- desc -->
+    <div class="col-md-6">
+        <h4>Tutorials List</h4>
+
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let tutorial of tutorials; let i = index" [class.active]="i == currentIndex" (click)="setActiveTutorial(tutorial, i)">
+                {{ tutorial.title }}
+            </li>
+        </ul>
+
+        <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+      Remove All
+    </button>
+    </div>
+    <!-- des -->
+
+
+    <!-- des -->
+    <div class="col-md-6">
+        <div *ngIf="currentTutorial">
+            <h4>Tutorial</h4>
+            <div>
+                <label><strong>Title:</strong></label> {{ currentTutorial.title }}
+            </div>
+            <div>
+                <label><strong>Description:</strong></label> {{ currentTutorial.description }}
+            </div>
+            <div>
+                <label><strong>Status:</strong></label> {{ currentTutorial.published ? "Published" : "Pending" }}
+            </div>
+
+            <a class="badge badge-warning" routerLink="/tutorials/{{ currentTutorial.id }}">
+        Edit
+      </a>
+        </div>
+
+        <div *ngIf="!currentTutorial">
+            <br />
+            <p>Please click on a Tutorial...</p>
+        </div>
+    </div>
+</div>
